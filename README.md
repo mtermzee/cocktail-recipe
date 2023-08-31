@@ -40,3 +40,7 @@ See [Ionic UI](https://ionicframework.com/docs/componentsSee).
 </br>
 
 See [Cocktail API](https://www.thecocktaildb.com/).
+
+</br>
+
+See [Watch playlist](https://www.youtube.com/playlist?list=PL0X1HZ56-JSC0_cB9gZL9R0lY4iAH4AZN).
