@@ -6,6 +6,9 @@ import { pinia } from "./pinia";
 
 import { IonicVue } from "@ionic/vue";
 
+import "@/assets/styles/base.css";
+import "@/assets/styles/tailwind.css";
+
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/vue/css/core.css";
 
