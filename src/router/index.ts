@@ -29,6 +29,11 @@ const routes: Array<RouteRecordRaw> = [
 			},
 		],
 	},
+	{
+		path: "/drinks-by-ingredient/:ingredient",
+		name: "DrinksByIngredient",
+		component: () => import("@/views/DrinksByIngredient.vue"),
+	},
 ];
 
 export const router = createRouter({
