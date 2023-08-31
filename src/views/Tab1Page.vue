@@ -15,35 +15,14 @@
       <ion-refresher slot="fixed" @ionRefresh="doRefresh($event)" pullFactor="0.8" pullMin="60" pullMax="120">
         <ion-refresher-content></ion-refresher-content>
       </ion-refresher>
-
-      <ion-card>
-        <img :src="state.randomCocktail.strDrinkThumb">
-        <ion-card-header>
-          <ion-card-subtitle>
-            {{ state.randomCocktail.strCategory }} | Served In
-            {{ state.randomCocktail.strGlass }}
-          </ion-card-subtitle>
-          <ion-card-title>{{ state.randomCocktail.strDrink }}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <p>{{ state.randomCocktail.strInstructions }}</p>
-          <ion-list-header>
-            <ion-label>Ingredients</ion-label>
-            <ion-list>
-              <ion-item v-for="i in 15" :key="i" v-if="state.randomCocktail['strIngredient' + i]">
-                <ion-label>{{ state.randomCocktail['strIngredient' + i] }}</ion-label>
-                <ion-note slot="end">{{ state.randomCocktail['strMeasure' + i] }}</ion-note>
-              </ion-item>
-            </ion-list>
-          </ion-list-header>
-        </ion-card-content>
-      </ion-card>
+      <drink-card :drink="state.randomCocktail" />
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+import DrinkCard from '@/components/DrinkCard.vue';
 import { reactive } from 'vue';
 import axios from 'axios';
 
