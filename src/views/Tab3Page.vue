@@ -6,7 +6,7 @@
       </ion-toolbar>
 
       <ion-toolbar>
-        <ion-searchbar animated placeholder="Search" v-model="searchTerm" />
+        <ion-searchbar animated debounce="500" placeholder="Search" v-model="searchTerm" />
       </ion-toolbar>
     </ion-header>
 
