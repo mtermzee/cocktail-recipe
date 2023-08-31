@@ -36,3 +36,7 @@ See [5 Elegant ways to use Pinia](https://www.vuemastery.com/courses/5-elegant-w
 </br>
 
 See [Ionic UI](https://ionicframework.com/docs/componentsSee).
+
+</br>
+
+See [Cocktail API](https://www.thecocktaildb.com/).
