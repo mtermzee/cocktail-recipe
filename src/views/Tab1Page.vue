@@ -21,13 +21,14 @@
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonSpinner, IonRefresher, IonRefresherContent } from '@ionic/vue';
 import DrinkCard from '@/components/DrinkCard.vue';
 import { reactive } from 'vue';
 import axios from 'axios';
+import IDrinkDetails from '@/interfaces/IDrinkDetails';
 
 const state = reactive({
-  randomCocktail: {},
+  randomCocktail: {} as IDrinkDetails,
   loading: false,
 })
 

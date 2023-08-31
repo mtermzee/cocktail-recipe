@@ -26,17 +26,14 @@
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonSpinner, IonList, IonItem, IonThumbnail, IonLabel } from '@ionic/vue';
 import { reactive } from 'vue';
 import axios from 'axios';
 import router from '@/router';
-
-interface Ingredient {
-  strIngredient1: string;
-}
+import IIngredient from '@/interfaces/IIngredient';
 
 const state = reactive({
-  ingredients: [] as Ingredient[],
+  ingredients: [] as IIngredient[],
   loading: false
 });
 

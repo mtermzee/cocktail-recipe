@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonBackButton } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonBackButton, IonSpinner } from '@ionic/vue';
 import DrinkCard from '@/components/DrinkCard.vue';
 import { reactive } from 'vue';
 import router from '@/router';

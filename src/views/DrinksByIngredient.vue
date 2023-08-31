@@ -29,21 +29,16 @@
 </template>
   
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonBackButton } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonBackButton, IonSpinner, IonList, IonItem, IonThumbnail, IonLabel } from '@ionic/vue';
 import { reactive } from 'vue';
 import axios from 'axios';
 import router from '@/router';
-
-interface Drink {
-    strDrink: string;
-    strDrinkThumb: string;
-    idDrink: string;
-}
+import IDrink from '@/interfaces/IDrink';
 
 const ingredient = router.currentRoute.value.params.ingredient;
 
 const state = reactive({
-    drinks: [] as Drink[],
+    drinks: [] as IDrink[],
     loading: false
 });
 

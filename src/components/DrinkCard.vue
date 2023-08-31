@@ -12,19 +12,21 @@
             <p>{{ drink.strInstructions }}</p>
             <ion-list-header>
                 <ion-label>Ingredients</ion-label>
-                <ion-list>
-                    <ion-item v-for="i in 15" :key="i" v-if="drink.strIngredient1">
-                        <ion-label>{{ drink['strIngredient' + i] }}</ion-label>
-                        <ion-note slot="end">{{ drink['strMeasure' + i] }}</ion-note>
-                    </ion-item>
-                </ion-list>
             </ion-list-header>
+            <ion-list>
+                <template v-for="i in 15" :key="i">
+                    <ion-item v-if="drink[`strIngredient${i}`]">
+                        <ion-label>{{ drink[`strIngredient${i}`] }}</ion-label>
+                        <ion-note slot="end">{{ drink[`strMeasure${i}`] }}</ion-note>
+                    </ion-item>
+                </template>
+            </ion-list>
         </ion-card-content>
     </ion-card>
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonBackButton } from '@ionic/vue';
+import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonListHeader, IonList, IonItem, IonLabel, IonNote } from '@ionic/vue';
 
 defineProps({
     drink: {

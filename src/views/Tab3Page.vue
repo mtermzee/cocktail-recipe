@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonSearchbar } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonSearchbar, IonSpinner, IonLabel } from '@ionic/vue';
 import DrinkCard from '@/components/DrinkCard.vue';
 import { reactive, ref, watch } from 'vue';
 import axios from 'axios';
