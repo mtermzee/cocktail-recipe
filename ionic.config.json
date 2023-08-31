@@ -1,0 +1,7 @@
+{
+  "name": "cocktail-recipe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
